@@ -18,14 +18,17 @@ export function reducer(
         ...state,
         data
       };
-    },
+    }
     case fromActions.REMOVE_TODO: {
-        const data = state.data.filter(todo => todo.label != action.payload.label);
-        return {
-          ...state,
-          data
-        };
-      }
+      const data = state.data.filter(
+        todo => todo.label != action.payload.label
+      );
+
+      return {
+        ...state,
+        data
+      };
+    }
   }
   return state;
 }
